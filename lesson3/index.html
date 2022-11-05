@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"></link>
-    <script src="script.js" defer></script> 
-    <title>Μάθημα 2</title>
+    <script src="script.js" defer ></script>
+    <title>Μάθημα 3</title>
 </head>
 <body>
     <nav>
@@ -26,37 +26,21 @@
                 <p>This is some text</p>
                 <p>More Text</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente natus eligendi at corporis quo, ratione minus reiciendis tempora voluptatem temporibus aliquam rem repellat repudiandae sequi est. Dicta cumque tempora libero.</p>
-                <form method="post" action="form-data">
-                    <!--
-                    Όνομα
-                    Επώνυμο
-                    Σχολείο
-                    Αριθμό Μητρώου
-                    Τάξη (dropdown)
-                    
-                    Κατευθυνση (radio)
-                    
-                    Checkboxes για
-                        - ειδικες μετακίνηση
-                        - δυσλεξία
-                        - ασθμα
-                    -->
-                    <input type="radio" id="html" name="fav_language" value="HTML">
-                    <label for="html">HTML</label>
-                    <input type="radio" id="css" name="fav_language" value="CSS">
-                    <label for="css">CSS</label>
-                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                    <label for="javascript">JavaScript</label>
-                    <input type="submit" value="Καταχώρηση">
+                <form>
+                    <label for="comment">Σχολιάστε</label>
+                    <input type="text" id="comment" name="comment">
+                    <button id="submit-button">Καταχώρηση</button>
                 </form>
             </article>
             <div class="sidebar light-border">
-                <ul>
+                <ul id="comment-section">
+                    <!-- 
                     <li>Comment 1</li>
                     <li>Comment 2</li>
                     <li>Comment 3</li>
                     <li>Comment 4</li>
-                    <li>Comment 5</li>
+                    <li>Comment 5</li> 
+                    -->
                 </ul>
             </div>
         </div>
