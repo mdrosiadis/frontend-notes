@@ -16,6 +16,7 @@ function addComment(comment) {
     commentSection.appendChild(newComment);
 }
 
+
 // Φτίαξε μια λίστα απο σχόλια 
 // και βάλτα με τη σειρά στην αννάλογη θέση
 // const comments_data = [
@@ -57,12 +58,6 @@ comments_data.forEach(comment => {
 });
 */
 
-
-
-
-
-
-
 const comment_data = [
     {
         timestamp: 111111,
@@ -82,17 +77,20 @@ const comment_data = [
 
 comment_data.forEach(addComment);
 
-fetch('http://api.quotable.io/random?maxLength=50')
-.then(res => res.json())
-.then(res_json => addComment(res_json));
+for(let i=0; i < 5; i++) {
+    fetch('http://api.quotable.io/random?maxLength=50')
+    .then(res => res.json())
+    .then(res_json => addComment(res_json))
+    .catch(err => {
+        const errorPopup = document.querySelector(".popup");
+        errorPopup.style.visibility = 'visible';
 
+        setTimeout((popup) => {
+            popup.style.visibility = 'hidden'
+        }, 2000, errorPopup);
+    });
 
-
-
-
-
-
-
+}
 
 
 
